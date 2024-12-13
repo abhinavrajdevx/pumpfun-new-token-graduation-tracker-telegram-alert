@@ -2,9 +2,6 @@ import solanaWeb3 from "@solana/web3.js";
 import { getLatestMigratedTokens } from "./utility/pumpFun";
 import { Telegraf } from "telegraf";
 import { sendMigrationAlert } from "./utility/telegram/sendAlerts";
-import * as dotenv from "dotenv";
-
-dotenv.config();
 
 const endpoint = process.env.SOLANA_RPC_ENDPOINT as string;
 const BOT_TOKEN = process.env.BOT_TOKEN as string;

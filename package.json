@@ -1,7 +1,13 @@
 {
-  "name": "solana-graduating-telegram",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "node-ts",
+  "version": "0.0.0",
+  "author": "dayblox",
+  "description": "Node.js & TypeScript starter",
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": ">=18.11",
+    "pnpm": ">=7.27"
+  },
   "scripts": {
     "dev": "pnpm /dev:.*/",
     "dev:build": "esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
@@ -9,14 +15,12 @@
     "build": "esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
     "start": "node dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@solana/web3.js": "^1.95.8",
-    "dotenv": "^16.4.7",
+    "esbuild": "^0.23.0",
     "telegraf": "^4.16.3",
-    "typescript": "^5.7.2"
+    "@solana/web3.js": "^1.95.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9"
   }
 }
