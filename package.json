@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tsc -b && node dist/index.js",
-    "start" : "npm install && npm run dev"
+    "dev": "pnpm /dev:.*/",
+    "dev:build": "esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
+    "dev:run": "node --inspect -r ./dist/dev.js --watch dist/src",
+    "build": "esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
+    "start": "node dist"
   },
   "keywords": [],
   "author": "",
